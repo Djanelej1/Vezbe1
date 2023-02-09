@@ -25,7 +25,7 @@ class Movie {
 
 
 class Program {
-    constructor (name,date, listOfMovies =[], totalNumbersOfMovies ){
+    constructor (name,date, listOfMovies, totalNumbersOfMovies ){
         this.name =name;
         this.date = new Date(date);
         this.listOfMovies =listOfMovies;
@@ -42,17 +42,20 @@ class Program {
          sum +=1;
      }return sum;
  }
+
+ calculateDuration (list){
+    var sum =0;
+    for (var i =0; i<list.length;i++){
+        sum += Number(list[i].length1);
+    } return sum;
+}
   getProgramData(){
-  var total = 0; 
-  var listMovies =[];
-  for (var i = 0; i<listOfMovies.length;i++){
-     total +=parseInt(listOfMovies[i].length); 
-     listMovies.push(listOfMovies[i].movieData() + "\n\t");
+    return ( this.date.toDateString() + "," +  this.listOfMovies);
   
-  }return ( this.date.toDateString() + "," + "total duration is " + total + "min" + listMovies);
+  }
   
  }
-}
+
 
 
 

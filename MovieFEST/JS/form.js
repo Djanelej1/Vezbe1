@@ -33,16 +33,17 @@ $('.create-movie').on("click", function (e){
         console.log(movieInst);
         
         function addMovietoList(movie1){
-            return movieList.push(movie1.getMovieData());
+            return movieList.push(movie1);
         
          };
     
          movieList1 =addMovietoList(movieInst);
          console.log(movieList); // number of movies in the list 
          
-     
+       console.log(movieList[0].getMovieData());
+
          $.each(movieList,function (i,element){          //dodavanje filmova na listu filmova -poslednji fieldset
-            $('.movie-select').append($('<option/>')).append(movieList[i])
+            $('.movie-select').append($('<option>')).append(movieList[i].getMovieData())
                  
             
          })
@@ -66,15 +67,19 @@ $('.create-movie').on("click", function (e){
      var errorProgram = $('.program-error');
      var errorMessage1 ='';
      var date = new Date($('.program-date').val());
+     var day = date.getDate();
+     var month = date.getMonth() +1;
+     var year = date.getFullYear();
+     var dateProgram = day +"/"+ month + "/" + year;
      var duration = calculateDuration(movieList);
-     var total = totalNumbersOfMovies(movieList1);
+     var total = movieList1;
      var nameProgram =$('.program-title').val();
      
      function createProgram(){
         errorMessage1 = checkInputDate();
         if(!errorMessage1){  
         var programInstance = new Program (nameProgram,date,movieList1,movieList1.length);
-        programPlace.append('<li/>').append(nameProgram + " -" +programInstance.date.toDateString() +" "+duration);
+        programPlace.append('<li/>').append(nameProgram + " -" + dateProgram +" " + "movies:" + total + " " + "duration :"+ duration + "min");
         }else { errorProgram.html(errorMessage1);}
         return programInstance;
     };
@@ -87,7 +92,8 @@ $('.create-movie').on("click", function (e){
          };
 
             programList1 =addProgramtoList(programInst);
-         
+          
+            
             function checkInputDate(){
                 var message ='';
                 if (date === ''){
@@ -99,35 +105,40 @@ $('.create-movie').on("click", function (e){
             function calculateDuration (list){
                 var sum =0;
                 for (var i =0; i<list.length;i++){
-                    sum += list[i].length1;
+                    sum += Number(list[i].length1);
                 } return sum;
             }
             function totalNumbersOfMovies(list) {
                 return list.length;
             }
 
-
+            
+            $.each(programList,function (i,element){          //dodavanje programa na listu programa -poslednji fieldset
+                $('.program-select').append($('<option>')).append(programList[i].name + " " + dateProgram + " " + "movies:" + total + " " + "duration :"+ duration + "min");
+                
          }) 
 
         
-         $('.create-program').on("click", function (e){
+         $('.add-movie').on("click", function (e){
 
             e.preventDefault();
-           // var duration = calculateDuration(movieList1); 
-            //var total = totalNumbersOfMovies(movieList1);
-            console.log(movieList1)
-            var movieOption = addToList(movieList1);
-            $('.movie-select').append('<option/>').html(movieList1);
-            var programOption = addToList(programList1,$('<option/>'));
-            $('.program-select').append(programOption);
+        
+           
+            var movieOption = $('.movie-select option:selected').text();
+            var programOption = $('.program-select option:selected').text();
+            
+            function addMovietoProgram(movieOption){
+                return movieList.push(movieOption);
+             }
+            var funk =  addMovietoProgram();
+            console.log(movieList);
+            $.each(programList,function (i,element){  
+            $('.program-movie-list').append('<li>').append(programList[i] +" \n"+ movieList[i].getMovieData());
+            })
          })   
          
-         function addToList(list){
-            var element;
-            for (var i =0; i<list.length;i++){
-               element = list[i]
-            }return element;
-         }
+        
+        
     
         
 
@@ -135,5 +146,5 @@ $('.create-movie').on("click", function (e){
 
 
 
-
+})
 
