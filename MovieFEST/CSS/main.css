@@ -1,0 +1,48 @@
+form {
+    margin: auto;
+    width: 70%;
+    font-size: 12pt;
+}
+
+h1 {
+    margin: auto;
+    text-align: center;
+}
+
+.create-movie, .create-program,.add-movie {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    width: 100%;
+}
+
+.program-date, .movie-title, .movie-length, .program-title{
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+select, option {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    margin: 10px 0;
+    border-radius: 0px;
+    box-sizing: border-box;
+    color:black;
+
+}
+
+.error {
+    color: tomato;
+    padding: 5px;
+    height: 15px;
+}
+.movie-list li, .program-list li{
+    list-style-type: none;
+}

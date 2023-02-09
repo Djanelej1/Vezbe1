@@ -1,0 +1,36 @@
+*{
+    margin:0px;
+    text-align: center;
+    padding:5px;
+}
+
+#row-input{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: azure;
+}
+.header{
+    background-color: cadetblue;
+    margin: 15px;
+    color:aliceblue;
+}
+#button-add{
+    color:dodgerblue;
+    font-size: large;
+}
+#passed-total{
+    background-color: dodgerblue;
+    color:white;
+    width:150px;
+    margin:auto;
+}
+#failed-total{
+    background-color: orangered;
+    color:white;
+    width:150px;
+    margin:auto;
+}
+#failed-students, #passed-students {
+    list-style-type: none;
+}

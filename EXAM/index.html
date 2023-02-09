@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/EXAM/CSS/main.css">
+    <script type="text/javascript" src="./JS/subject.js"></script>
+    <script type="text/javascript" src="./JS/student.js"></script>
+    <script type="text/javascript" src="./JS/exam.js"></script>
+    <script type="text/javascript" src="./JS/form.js"></script>
+    <script type="text/javascript" src="./JS/app.js"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+   <div class="container-fluid">
+   <div class="header">
+    <div class="h1">EXAM STATISTIC JUNE</div>
+    <div class="ul" id="total">Total students:
+        
+    </div>
+    <div id="passed-total">PASSED:</div>
+    <div  id="failed-total">FAILED:</div>
+   </div>
+   
+
+    <form id="myform">
+        <div class="row" id="row-input">
+        <div class="col-3">
+        <select class="form-select" id="subjects">
+            <option value="HTML">HTML</option>
+            <option value="JAVASCRIPT">JAVASCRIPT</option>
+            <option value="JAVA">JAVA</option>
+          </select>
+        </div>
+        <div class="col-3">
+          <input type="text" class="form-control" id="name-lastname" placeholder="Name and lastname">
+        </div>
+        <div class="col-3"> 
+                <input type="number" class="form-control" id="grades"placeholder="Grade">
+              
+        </div>
+    
+        <div class="col-3">
+        <button type="submit" class="btn" id="button-add" >ADD</button>
+        </div>
+</div>
+    
+    </form>
+
+    <div class="row">
+        <div class="col">
+            <div class="ul" id="passed-students">PASSED:
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="ul" id="failed-students">FAILED:
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
