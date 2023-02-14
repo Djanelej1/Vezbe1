@@ -1,0 +1,29 @@
+* {
+  text-align: center; }
+
+#header-row, #footer-row {
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin: auto; }
+
+#title {
+  color: black; }
+
+#picture-container {
+  margin-left: 100px;
+  margin-right: 100px; }
+
+#column-picture {
+  margin-left: 150px;
+  margin-right: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: blue; }
+  #column-picture > div {
+    margin: 5px;
+    width: 30%;
+    border: 1px solid #d4d4d4; }
+
+/*# sourceMappingURL=style.css.map */
