@@ -1,0 +1,96 @@
+* {
+  text-align: center;
+  margin: auto; }
+
+#header-row,
+#footer-row {
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin: 0; }
+
+#title {
+  color: black; }
+
+#picture-container {
+  margin-left: 100px;
+  margin-right: 100px; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    #picture-container {
+      margin-left: 10px;
+      margin-right: 10px; }
+      #picture-container .col-4 {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%; } }
+  @media (min-width: 768px) and (max-width: 1200px) {
+    #picture-container {
+      margin-left: 50px;
+      margin-right: 50px; }
+      #picture-container .col-4 {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 50%; } }
+  #picture-container h4 {
+    color: blue; }
+
+.clickMe1 {
+  list-style-type: none; }
+
+#poster img {
+  width: 550px;
+  height: 900px; }
+@media (min-width: 320px) and (max-width: 767px) {
+  #poster {
+    width: 100px;
+    height: 300px; } }
+
+li {
+  text-align: left;
+  margin: 10px;
+  list-style-type: square; }
+
+h5,
+h2 {
+  text-align: left; }
+
+#details p {
+  text-align: left; }
+
+.container-fluid > * {
+  margin-left: 100px;
+  margin-right: 100px; }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .container-fluid > * {
+      margin-left: 10px;
+      margin-right: 10px; } }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  #poster-cast-row {
+    display: flex;
+    flex-wrap: wrap; }
+    #poster-cast-row .col-6 {
+      width: 100%; }
+      #poster-cast-row .col-6 img {
+        width: 150px;
+        height: 300px; } }
+@media (min-width: 768px) and (max-width: 1200px) {
+  #poster-cast-row {
+    display: flex;
+    flex-wrap: wrap; }
+    #poster-cast-row .col-6 {
+      width: 100%; }
+      #poster-cast-row .col-6 img {
+        width: 250px;
+        height: 400px; } }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  #crew-list,
+  #aka-list,
+  #episodes-list > li {
+    font-size: small; } }
+
+.alert {
+  background-color: #ec8d8d; }
+
+/*# sourceMappingURL=style.css.map */
