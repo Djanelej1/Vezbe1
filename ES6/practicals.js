@@ -58,12 +58,18 @@ function increaseElement(array=[], value = 1){
 }
 console.log(increaseElement([4, 6, 11, -9, 2.1],2));
 
+//drugi nacin 
+function increaseElement(array=[], value = 1){
+    const result = array.map((item)=> item*value);
+    return result;
+}
+console.log(increaseElement([4, 6, 11, -9, 2.1],2));
+
 //4.Write a function that filters all even elements of the array.
 
 function allEven(array =[]){ 
     return array.filter((item )=> item %2==0);
 }
-
 
 console.log(allEven([6, 11, 9, 0, 3]))
 
@@ -146,3 +152,4 @@ function allProduct(array =[]){
 function findMax(array=[]){
     return Math.max(...array);
 }console.log(findMax([2, 7, 3, 8, 5.4]))
+
