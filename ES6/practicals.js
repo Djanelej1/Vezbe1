@@ -153,3 +153,26 @@ function findMax(array=[]){
     return Math.max(...array);
 }console.log(findMax([2, 7, 3, 8, 5.4]))
 
+
+// additional function 
+
+function obscure_email(email) {
+    var parts = email.split("@");
+    var name = parts[0];
+    var result = name.slice(0,3);                                 // hide email function 
+    result += "***";
+    result += name.substr(Number(name.length-3),Number(name.length-1));
+    result += "@";
+    var domain = parts[1];
+    result += domain
+
+    return result;
+}console.log(obscure_email("oliver.lewis@example.com"))
+
+function hideEmail (email){
+    let hidenEmail ="";
+     let firstPart = email.split("@")[0];
+     let cutFirst = firstPart.slice(0,3);
+     let cutLast = "..." +firstPart.slice((firstPart.length-3), (firstPart.length))+"@"
+     return hidenEmail += cutFirst+ cutLast + email.split("@")[1];
+}console.log(hideEmail("oliver.lewis@example.com"))

@@ -37,9 +37,11 @@ const Giphy = () => {
             search +
             "&api_key=" +
             apiKey
-        ).then((response) => response.json());
+        ).then((response) =>  response.json()).then((response=>{
 
-        console.log(response.data);
+        }));
+
+        
 
         setData1(response.data.data);
         setisLoading(false);
@@ -52,7 +54,7 @@ const Giphy = () => {
   const showGifs = () => {
     if (isLoading && !data1) {
       return <div>Loading...</div>;
-    }
+    } else {
 
     return data1.map((el) => {
       return (
@@ -74,7 +76,7 @@ const Giphy = () => {
           </Card.Body>
         </Card>
       );
-    });
+    });}
   };
 
   return (
